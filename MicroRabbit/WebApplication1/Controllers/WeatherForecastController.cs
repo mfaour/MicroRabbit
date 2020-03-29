@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace MicroRabbit.Banking.Api.Controllers
+namespace WebApplication1.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
