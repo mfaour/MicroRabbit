@@ -20,10 +20,10 @@ namespace MicroRabbit.MVC.Controllers
 		{
 			_transferService = transferService;
 					}
-		public HomeController(ILogger<HomeController> logger)
-		{
-			_logger = logger;
-		}
+		//public HomeController(ILogger<HomeController> logger)
+		//{
+		//	_logger = logger;
+		//}
 
 		public IActionResult Index()
 		{
@@ -50,6 +50,7 @@ namespace MicroRabbit.MVC.Controllers
 				ToAccount = model.ToAccount,
 				TransferAmount = model.TransferAmount
 			};
+			await _transferService.Transfer(transferDto);
 			return View("Index");
 		}
 	}
